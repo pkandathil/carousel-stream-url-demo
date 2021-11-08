@@ -13,14 +13,13 @@ function App() {
   ]);
   
   const previousClicked = () => {
-    const firstElement = urlsInfo.shift()
-    const newUrlsInfo = [ ...urlsInfo, firstElement]
+    const lastElement = urlsInfo.pop()
+    const newUrlsInfo = [lastElement, ...urlsInfo ]
     setUrlsInfo(newUrlsInfo)
   }
   const nextClicked = () => {
-    console.log('Next')
-    const lastElement = urlsInfo.pop()
-    const newUrlsInfo = [lastElement, ...urlsInfo]
+    const firstElement = urlsInfo.shift()
+    const newUrlsInfo = [ ...urlsInfo, firstElement]
     setUrlsInfo(newUrlsInfo)
   }
   return (
