@@ -11,13 +11,13 @@ export class PlayerObj {
     this.player = <Player streamUrl={ inputStreamUrl} />
   }
   pause() {
-    console.log(`${this.inputStreamUrl} paused`)
+    console.log(`${this.streamUrl} paused`)
   }
   play() {
-    console.log(`${this.inputStreamUrl} played`)
+    console.log(`${this.streamUrl} played`)
   }
   delete() {
-    console.log(`${this.inputStreamUrl} deleted`)
+    console.log(`${this.streamUrl} deleted`)
     this.streamUrl = ''
   }
 
@@ -29,6 +29,6 @@ export class PlayerObj {
 
 
 export const create = () => {
-  console.log('In created')
+  console.log('Creating a new player')
   return new PlayerObj()
 }
